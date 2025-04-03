@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitGames+</title>
+    <title>Clever | Portal</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/51/Clever-logotype.svg" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">GG+</div>
+        <div class="logo">Clever</div>
         <nav>
             <a href="#">🎮 Games</a>
             <a href="#">📱 Apps</a>
@@ -16,23 +17,39 @@
             <a href="#">⚙️ Settings</a>
         </nav>
     </header>
+
     <main>
-        <h1>GITGAMES+</h1>
-        <p>Unblock the fun, anywhere.</p>
-        <input type="text" placeholder="Search or enter a URL..." id="searchBar">
+        <h1>Clever Portal</h1>
+        <p>Unblock the web seamlessly.</p>
+
+        <input type="text" id="urlInput" placeholder="Enter a website URL...">
+        <button onclick="loadSite()">Go</button>
+
+        <div id="loading">Loading...</div>
+
+        <iframe id="webFrame" style="display: none;"></iframe>
     </main>
 
+    <footer>
+        <p>Made by <span class="credit">Omniman</span></p>
+    </footer>
+
     <script>
-        // Add functionality to make the search bar input trigger the proxy
-        document.getElementById("searchBar").addEventListener("keypress", function(e) {
-            if (e.key === "Enter") {
-                const searchInput = document.getElementById("searchBar").value;
-                if (searchInput) {
-                    const proxyUrl = `https://great-dulcia-ggplus-6f9455be.koyeb.app?url=${encodeURIComponent(searchInput)}`;
-                    window.open(proxyUrl, "_blank"); // Open the proxy content in a new tab
-                }
+        function loadSite() {
+            var url = document.getElementById("urlInput").value;
+            if (!url.startsWith("http")) {
+                url = "https://" + url;
             }
-        });
+
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("webFrame").style.display = "none";
+
+            setTimeout(() => {
+                document.getElementById("webFrame").src = url;
+                document.getElementById("webFrame").style.display = "block";
+                document.getElementById("loading").style.display = "none";
+            }, 2000);
+        }
     </script>
 </body>
 </html>
