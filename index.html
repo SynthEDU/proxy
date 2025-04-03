@@ -20,29 +20,16 @@
         <h1>GITGAMES+</h1>
         <p>Unblock the fun, anywhere.</p>
         <input type="text" placeholder="Search or enter a URL..." id="searchBar">
-        <button id="searchButton">Go</button>
-
-        <!-- Iframe to display the proxy content -->
-        <iframe id="proxyIframe" style="width:100%; height: 600px; border: none;"></iframe>
     </main>
 
     <script>
-        // When the 'Go' button is clicked, get the URL from the search bar and load it into the iframe via the proxy
-        document.getElementById("searchButton").addEventListener("click", function() {
-            const searchInput = document.getElementById("searchBar").value;
-            if (searchInput) {
-                const proxyUrl = `https://great-dulcia-ggplus-6f9455be.koyeb.app?url=${encodeURIComponent(searchInput)}`;
-                document.getElementById("proxyIframe").src = proxyUrl;
-            }
-        });
-
-        // If Enter key is pressed in the search bar, trigger the same action as the 'Go' button
+        // Add functionality to make the search bar input trigger the proxy
         document.getElementById("searchBar").addEventListener("keypress", function(e) {
             if (e.key === "Enter") {
                 const searchInput = document.getElementById("searchBar").value;
                 if (searchInput) {
                     const proxyUrl = `https://great-dulcia-ggplus-6f9455be.koyeb.app?url=${encodeURIComponent(searchInput)}`;
-                    document.getElementById("proxyIframe").src = proxyUrl;
+                    window.open(proxyUrl, "_blank"); // Open the proxy content in a new tab
                 }
             }
         });
