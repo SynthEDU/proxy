@@ -4,14 +4,12 @@ body {
     color: white;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
-    font-family: Arial, sans-serif; /* Added a basic font for better appearance */
 }
 
 /* Header Navigation Hover Effects */
 nav a {
     position: relative;
     transition: all 0.3s ease-in-out;
-    margin: 0 15px;  /* Added margin to space out links */
 }
 
 nav a:hover {
@@ -22,13 +20,6 @@ nav a:hover {
 /* Search Bar Glow Effect */
 #searchBar {
     transition: 0.3s ease-in-out;
-    padding: 10px;
-    width: 80%;
-    max-width: 500px;
-    margin-top: 20px;
-    background-color: #333;
-    border: 1px solid #444;
-    color: white;
 }
 
 #searchBar:focus {
@@ -36,30 +27,13 @@ nav a:hover {
     box-shadow: 0px 0px 10px #00bfff;
 }
 
-/* Button Styles */
+/* Smooth Button Click Animation */
 button {
-    background-color: #00bfff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #009ACD;  /* Slightly darker on hover */
 }
 
 button:active {
     transform: scale(0.95);
-}
-
-/* Iframe Styles */
-#proxyIframe {
-    border: none;
-    margin-top: 20px;
 }
 
 /* Fade-in Keyframe */
