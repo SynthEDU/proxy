@@ -1,48 +1,43 @@
-/* General Styling */
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
     background-color: #121212;
     color: white;
     text-align: center;
-    margin: 0;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #000;
-    border-radius: 10px;
+    padding: 15px;
+    background: #1a1a1a;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    background: white;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: white;
 }
 
 nav a {
-    text-decoration: none;
+    margin: 0 15px;
     color: white;
-    margin: 0 10px;
+    text-decoration: none;
     font-size: 18px;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
 }
 
-/* Main */
 main {
-    margin-top: 50px;
+    margin-top: 10%;
 }
 
 h1 {
@@ -51,49 +46,13 @@ h1 {
 }
 
 p {
-    color: gray;
+    margin-bottom: 20px;
+}
+
+#searchBar {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     font-size: 16px;
-}
-
-.search-container {
-    margin-top: 20px;
-}
-
-input {
-    width: 80%;
-    max-width: 500px;
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background: #222;
-    color: white;
-    text-align: center;
-}
-
-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #444;
-}
-
-/* Wave Effect */
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.wave {
-    height: 100px;
-    background: linear-gradient(to bottom, transparent, #121212);
 }
