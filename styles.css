@@ -15,27 +15,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background: #1a1a1a;
     width: 100%;
 }
 
 .left-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: white;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 nav {
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 20px;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 nav a:hover {
@@ -43,17 +43,18 @@ nav a:hover {
 }
 
 main {
-    margin-top: 15%;
+    margin-top: 12%;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
 .search-container {
@@ -62,20 +63,25 @@ p {
 }
 
 #searchBar {
-    width: 40%;
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-    background-color: transparent;
+    width: 55%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     outline: none;
+    transition: 0.3s;
+}
+
+#searchBar:focus {
+    border-color: white;
 }
 
 #loading {
     display: none;
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
     color: #007bff;
@@ -93,4 +99,5 @@ iframe {
     border: none;
     background: white;
     display: none;
+    border-radius: 10px;
 }
