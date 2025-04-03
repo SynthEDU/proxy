@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <div class="logo">GG+</div>
+        <div class="left-title">Welcome to GP+</div>
         <nav>
             <a href="#">🎮 Games</a>
             <a href="#">📱 Apps</a>
@@ -21,15 +22,19 @@
         <h1>GITGAMES+</h1>
         <p>Unblock the fun, anywhere.</p>
         <div class="search-container">
-            <input type="text" placeholder="Search or enter a URL..." id="searchBar">
-            <button onclick="loadSite()">Go</button>
-            <button onclick="openFullscreen()">Fullscreen</button>
+            <input type="text" placeholder="Search or enter a URL..." id="searchBar" onkeypress="handleKeyPress(event)">
         </div>
         <div id="loading">Loading...</div>
         <iframe id="webFrame"></iframe>
     </main>
 
     <script>
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                loadSite();
+            }
+        }
+
         function loadSite() {
             var url = document.getElementById("searchBar").value;
             if (!url.startsWith("http")) {
@@ -43,15 +48,6 @@
                 document.getElementById("webFrame").style.display = "block";
                 document.getElementById("loading").style.display = "none";
             }, 1500);
-        }
-
-        function openFullscreen() {
-            var url = document.getElementById("searchBar").value;
-            if (!url.startsWith("http")) {
-                url = "https://" + url;
-            }
-            var newTab = window.open();
-            newTab.document.write('<iframe src="' + url + '" width="100%" height="100%" style="border:none;"></iframe>');
         }
     </script>
 </body>
