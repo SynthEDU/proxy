@@ -10,11 +10,6 @@
 
     <header>
         <div class="left-title">Welcome to GP+</div>
-        <nav>
-            <a href="#">🎮 Games</a>
-            <a href="#">📱 Apps</a>
-            <a href="#">⚙️ Settings</a>
-        </nav>
     </header>
     
     <main>
@@ -23,31 +18,39 @@
         <div class="search-container">
             <input type="text" placeholder="Search or enter a URL..." id="searchBar" onkeypress="handleKeyPress(event)">
         </div>
-        <div id="loading">Loading...</div>
-        <iframe id="webFrame"></iframe>
     </main>
 
     <script>
         function handleKeyPress(event) {
             if (event.key === "Enter") {
-                loadSite();
+                openFullscreenSite();
             }
         }
 
-        function loadSite() {
+        function openFullscreenSite() {
             var url = document.getElementById("searchBar").value;
             if (!url.startsWith("http")) {
                 url = "https://" + url;
             }
-            document.getElementById("loading").style.display = "block";
-            document.getElementById("webFrame").style.display = "none";
-
-            setTimeout(() => {
-                document.getElementById("webFrame").src = url;
-                document.getElementById("webFrame").style.display = "block";
-                document.getElementById("loading").style.display = "none";
-            }, 1500);
+            
+            var newTab = window.open();
+            newTab.document.write(`
+                <html>
+                <head>
+                    <title>Loading...</title>
+                    <style>
+                        body { margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh; }
+                        iframe { width: 100%; height: 100%; border: none; }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="${url}"></iframe>
+                </body>
+                </html>
+            `);
+            newTab.document.close();
         }
     </script>
+
 </body>
 </html>
