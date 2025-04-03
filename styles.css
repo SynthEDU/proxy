@@ -15,46 +15,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     background: #1a1a1a;
     width: 100%;
 }
 
 .left-title {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
-    padding-left: 25px;
-}
-
-nav {
-    padding-right: 25px;
-}
-
-nav a {
-    margin: 0 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    padding-left: 40px;
 }
 
 main {
-    margin-top: 12%;
+    margin-top: 15%;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 28px;
+    margin-bottom: 50px;
 }
 
 .search-container {
@@ -63,13 +48,13 @@ p {
 }
 
 #searchBar {
-    width: 55%;
-    padding: 15px;
+    width: 60%;
+    padding: 20px;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     outline: none;
     transition: 0.3s;
@@ -77,27 +62,4 @@ p {
 
 #searchBar:focus {
     border-color: white;
-}
-
-#loading {
-    display: none;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff;
-    animation: fadeIn 1s infinite alternate;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0.5; }
-    to { opacity: 1; }
-}
-
-iframe {
-    width: 90%;
-    height: 500px;
-    border: none;
-    background: white;
-    display: none;
-    border-radius: 10px;
 }
