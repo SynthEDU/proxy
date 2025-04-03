@@ -17,12 +17,18 @@ header {
     align-items: center;
     padding: 15px;
     background: #1a1a1a;
+    width: 100%;
 }
 
-.logo {
-    font-size: 24px;
+.left-title {
+    font-size: 20px;
     font-weight: bold;
     color: white;
+    padding-left: 20px;
+}
+
+nav {
+    padding-right: 20px;
 }
 
 nav a {
@@ -37,7 +43,7 @@ nav a:hover {
 }
 
 main {
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 h1 {
@@ -46,13 +52,13 @@ h1 {
 }
 
 p {
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .search-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
 #searchBar {
@@ -60,29 +66,16 @@ p {
     padding: 10px;
     border: 2px solid white;
     border-radius: 5px;
-    background-color: #222;
+    background-color: transparent;
     color: white;
     font-size: 16px;
     text-align: center;
-}
-
-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-button:hover {
-    background-color: #0056b3;
+    outline: none;
 }
 
 #loading {
     display: none;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 18px;
     font-weight: bold;
     color: #007bff;
