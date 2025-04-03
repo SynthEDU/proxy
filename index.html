@@ -22,14 +22,12 @@
         <input type="text" placeholder="Search or enter a URL..." id="searchBar">
         <button id="searchButton">Go</button>
 
-        <!-- Display content from the proxy in an iframe -->
-        <div id="proxyContainer" style="margin-top: 20px;">
-            <iframe id="proxyIframe" style="width: 100%; height: 600px; border: none;"></iframe>
-        </div>
+        <!-- Iframe to display the proxy content -->
+        <iframe id="proxyIframe" style="width:100%; height: 600px; border: none;"></iframe>
     </main>
 
     <script>
-        // Handling the search bar input and proxy URL fetching
+        // When the 'Go' button is clicked, get the URL from the search bar and load it into the iframe via the proxy
         document.getElementById("searchButton").addEventListener("click", function() {
             const searchInput = document.getElementById("searchBar").value;
             if (searchInput) {
@@ -38,7 +36,7 @@
             }
         });
 
-        // Handle pressing "Enter" in the search bar for a quick search
+        // If Enter key is pressed in the search bar, trigger the same action as the 'Go' button
         document.getElementById("searchBar").addEventListener("keypress", function(e) {
             if (e.key === "Enter") {
                 const searchInput = document.getElementById("searchBar").value;
